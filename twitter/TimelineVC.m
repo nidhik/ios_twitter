@@ -8,6 +8,8 @@
 
 #import "TimelineVC.h"
 #import "TweetCell.h"
+#import "ComposeTweetViewController.h"
+#import "TweetViewController.h"
 
 @interface TimelineVC ()
 
@@ -35,10 +37,15 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Sign Out" style:UIBarButtonItemStylePlain target:self action:@selector(onSignOutButton)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Compose" style:UIBarButtonItemStylePlain target:self action:@selector(onComposeButton)];
     
     UINib *customNib = [UINib nibWithNibName:@"TweetCell" bundle:nil];
     [self.tableView registerNib:customNib forCellReuseIdentifier:@"TweetCell"];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -120,7 +127,11 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+   // [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Tweet *tweet = self.tweets[indexPath.row];
+    TweetViewController *vc = [[TweetViewController alloc] initWithTweet:tweet];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /*
@@ -139,6 +150,14 @@
 
 - (void)onSignOutButton {
     [User setCurrentUser:nil];
+}
+
+- (void) onComposeButton
+{
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithNibName:@"ComposeTweetView" bundle:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void)reload {

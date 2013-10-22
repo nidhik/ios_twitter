@@ -30,7 +30,7 @@
 - (NSDate *)createdDate {
     NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    NSLog(@"%@", [formatter dateFromString:date]);
+//    NSLog(@"%@", [formatter dateFromString:date]);
     return [formatter dateFromString:date];
 }
 
