@@ -22,6 +22,11 @@
     return [self.data valueOrNilForKeyPath:@"user.screen_name"];
 }
 
+- (NSURL *)profileImageURL {
+    NSString *url = [self.data valueOrNilForKeyPath:@"user.profile_image_url"];
+    return [[NSURL alloc] initWithString:url];
+}
+
 - (NSDate *)createdDate {
     NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];

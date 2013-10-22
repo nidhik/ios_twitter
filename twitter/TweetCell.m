@@ -7,9 +7,11 @@
 //
 
 #import "TweetCell.h"
+#import "UIImageView+AFNetworking.h"
+
 @interface TweetCell()
 
-    @property (weak, nonatomic) IBOutlet UIImageView *profieImage;
+    @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
     @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
     @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
     @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
@@ -41,6 +43,7 @@
     self.nameLabel.text = tweet.name;
     self.userNameLabel.text = tweet.screenName;
     self.timestampLabel.text = [NSString stringWithFormat:@"%02f", tweet.createdDate.timeIntervalSinceNow];
+    [self.profileImage setImageWithURL:tweet.profileImageURL];
    
 }
 

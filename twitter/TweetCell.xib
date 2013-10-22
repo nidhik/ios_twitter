@@ -47,7 +47,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="9YP-Y0-FLV" id="Me2-Vk-SsT"/>
-                <outlet property="profieImage" destination="jxa-2w-b8H" id="As4-8S-3kf"/>
+                <outlet property="profileImage" destination="jxa-2w-b8H" id="zRg-qV-Sbi"/>
                 <outlet property="timestampLabel" destination="v2x-Rw-vEJ" id="RpA-tV-TEN"/>
                 <outlet property="tweetText" destination="ero-LO-AAt" id="2ae-wn-WQP"/>
                 <outlet property="userNameLabel" destination="9hp-Ar-Sir" id="lfZ-fI-yyo"/>
