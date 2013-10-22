@@ -38,6 +38,10 @@
 - (void) updateUIElementsWithTweet: (Tweet *) tweet {
     self.tweet = tweet;
     self.tweetText.text = tweet.text;
+    self.nameLabel.text = tweet.name;
+    self.userNameLabel.text = tweet.screenName;
+    self.timestampLabel.text = [NSString stringWithFormat:@"%02f", tweet.createdDate.timeIntervalSinceNow];
+   
 }
 
 @end

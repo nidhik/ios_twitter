@@ -14,6 +14,21 @@
     return [self.data valueOrNilForKeyPath:@"text"];
 }
 
+- (NSString *)name {
+    return [self.data valueOrNilForKeyPath:@"user.name"];
+}
+
+- (NSString *)screenName {
+    return [self.data valueOrNilForKeyPath:@"user.screen_name"];
+}
+
+- (NSDate *)createdDate {
+    NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    NSLog(@"%@", [formatter dateFromString:date]);
+    return [formatter dateFromString:date];
+}
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *params in array) {
