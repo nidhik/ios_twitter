@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface TweetCell : UITableViewCell
+
+@property (nonatomic, retain) Tweet *tweet;
+
+- (void) updateUIElementsWithTweet: (Tweet *) tweet;
+
 
 @end

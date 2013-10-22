@@ -7,6 +7,15 @@
 //
 
 #import "TweetCell.h"
+@interface TweetCell()
+
+    @property (weak, nonatomic) IBOutlet UIImageView *profieImage;
+    @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+    @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+    @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
+    @property (weak, nonatomic) IBOutlet UILabel *tweetText;
+
+@end
 
 @implementation TweetCell
 
@@ -24,6 +33,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void) updateUIElementsWithTweet: (Tweet *) tweet {
+    self.tweet = tweet;
+    self.tweetText.text = tweet.text;
 }
 
 @end
