@@ -207,8 +207,6 @@
 				1DDF96AB18171D9900545F16 /* ComposeTweetViewController.m */,
 				1DDF96AD18171DB400545F16 /* TweetViewController.h */,
 				1DDF96AE18171DB400545F16 /* TweetViewController.m */,
-				1DDF96B018171DE100545F16 /* TweetView.xib */,
-				1DDF96B418171E0D00545F16 /* ComposeTweetView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -255,6 +253,8 @@
 		42CC89BC17B0EFEE00B6D34B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1DDF96B418171E0D00545F16 /* ComposeTweetView.xib */,
+				1DDF96B018171DE100545F16 /* TweetView.xib */,
 				42CC89BD17B0F02600B6D34B /* TweetCell.h */,
 				42CC89BE17B0F02600B6D34B /* TweetCell.m */,
 				1DA3785318166089006A866C /* TweetCell.xib */,

@@ -28,11 +28,21 @@
 {
     [super viewDidLoad];
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onCancelButton)];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onTweetButton)];
+   
+    // nice to have a disabled Tweet button to start. enabled when there are 0 < n < 141 characters
 }
 
 - (void) onCancelButton
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:^(void){}];
+}
+
+- (void) onTweetButton
+{
+    // call client here to post the tweet
+    //[[TwitterClient instance] blah figure out AFNetworking post here
 }
 
 - (void)didReceiveMemoryWarning
