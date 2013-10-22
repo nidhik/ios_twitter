@@ -32,10 +32,7 @@
 
 - (void) onCancelButton
 {
-    TimelineVC *timelineVC = [[TimelineVC alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:timelineVC];
-    
-    [self presentViewController:nvc animated:YES completion:nil];
+    [self.navigationController dismissViewControllerAnimated:YES completion:^(void){}];
 }
 
 - (void)didReceiveMemoryWarning
