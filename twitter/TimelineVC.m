@@ -190,7 +190,7 @@
         self.tweets = [Tweet tweetsWithArray:response];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // Do nothing
+        NSLog(@"%@", error);
     }];
 }
 
