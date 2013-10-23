@@ -71,17 +71,17 @@
 
 - (void) onTweetButton
 {
-    NSLog(@"%d", self.replyId);
     NSString *text = self.tweetComposeView.text;
     if (self.tweetComposeView.text.length > 140) {
         text = [self.tweetComposeView.text substringWithRange:NSMakeRange(0, 141)];
     }
-    NSLog(@"%@", text);
     
     [[TwitterClient instance] tweet:text inReplyToStatusId:self.replyId success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"%@", response);
+        [self onCancelButton];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
+        [self onCancelButton];
     }];
 
 
