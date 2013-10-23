@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reply;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *retweet;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *favorite;
+@property (weak, nonatomic) IBOutlet UILabel *tweetDateLabel;
 
 @end
 
@@ -62,6 +63,8 @@
     if (self.tweet.favorited) {
         self.favorite.tintColor = [UIColor greenColor];
     }
+    
+    self.tweetDateLabel.text = self.tweet.createdDate;
 
 	// Do any additional setup after loading the view.
 }

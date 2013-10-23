@@ -14,6 +14,7 @@
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) NSString *screenName;
 @property (nonatomic, strong, readonly) NSString *createdDate;
+@property (nonatomic, strong, readonly) NSString *timeDiff;
 @property (nonatomic, strong, readonly) NSURL *profileImageURL;
 @property (nonatomic, assign, readonly) bool retweeted;
 @property (nonatomic, assign, readonly) bool favorited;

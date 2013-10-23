@@ -35,8 +35,22 @@
     return [self.data valueOrNilForKeyPath:@"id"];
 }
 
-
 - (NSString *)createdDate {
+    // http://stackoverflow.com/questions/902950/iphone-convert-date-string-to-a-relative-time-stamp/6509076#6509076
+    
+    NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [dateFormatter setDateFormat: @"EEE MMM dd HH:mm:ss Z yyyy"];
+     NSDate *ret = [dateFormatter dateFromString:date];
+    
+    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm"];
+    return [dateFormatter stringFromDate:ret];
+}
+
+
+
+- (NSString *)timeDiff {
     // http://stackoverflow.com/questions/902950/iphone-convert-date-string-to-a-relative-time-stamp/6509076#6509076
     
     NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
@@ -45,7 +59,6 @@
     [dateFormatter setDateFormat: @"EEE MMM dd HH:mm:ss Z yyyy"];
     
     NSDate *ret = [dateFormatter dateFromString:date];
-    
     NSDate *todayDate = [NSDate date];
     double ti = [ret timeIntervalSinceDate:todayDate];
     ti = ti * -1;
@@ -64,7 +77,7 @@
     	return[NSString stringWithFormat:@"%dd", diff];
     } else {
         [dateFormatter setDateFormat:@"MM/dd/yyyy"];
-        return [dateFormatter stringFromDate:[NSDate date]];
+        return [dateFormatter stringFromDate:ret];
     }
     return 0;
 }

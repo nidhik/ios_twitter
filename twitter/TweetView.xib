@@ -14,6 +14,7 @@
                 <outlet property="retweet" destination="wPt-tE-ZoP" id="2i4-SC-rib"/>
                 <outlet property="screenNameLabel" destination="5gu-ke-SDW" id="XWU-Jb-ei3"/>
                 <outlet property="toolbar" destination="49T-Ji-0Ep" id="BLJ-YW-du3"/>
+                <outlet property="tweetDateLabel" destination="f8j-Gy-QgE" id="qcJ-lZ-ilm"/>
                 <outlet property="tweetTextLabel" destination="LrL-cA-yki" id="VS3-r9-c3r"/>
                 <outlet property="view" destination="1" id="5TO-i3-dlc"/>
             </connections>
@@ -59,7 +60,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49T-Ji-0Ep">
-                    <rect key="frame" x="2" y="201" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="239" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem title="Reply" id="dW1-5f-9QK"/>
@@ -67,16 +68,25 @@
                         <barButtonItem title="Favorite" id="G0j-qp-XHv"/>
                     </items>
                 </toolbar>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8j-Gy-QgE">
+                    <rect key="frame" x="17" y="223" width="283" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="5gu-ke-SDW" firstAttribute="leading" secondItem="PkE-e3-uOx" secondAttribute="trailing" constant="15" id="2ZQ-A9-1rP"/>
                 <constraint firstItem="LrL-cA-yki" firstAttribute="top" secondItem="PkE-e3-uOx" secondAttribute="bottom" constant="30" id="4GJ-ty-ySI"/>
                 <constraint firstItem="Rqg-rU-WFe" firstAttribute="leading" secondItem="PkE-e3-uOx" secondAttribute="trailing" constant="15" id="6j5-kQ-TsX"/>
-                <constraint firstAttribute="trailing" secondItem="49T-Ji-0Ep" secondAttribute="trailing" constant="-2" id="Bqq-Tz-neE"/>
+                <constraint firstAttribute="trailing" secondItem="f8j-Gy-QgE" secondAttribute="trailing" constant="20" id="7rz-2a-tWp"/>
+                <constraint firstAttribute="trailing" secondItem="49T-Ji-0Ep" secondAttribute="trailing" id="Bqq-Tz-neE"/>
+                <constraint firstItem="f8j-Gy-QgE" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="17" id="F9N-KU-YCo"/>
                 <constraint firstAttribute="trailing" secondItem="p7p-Cw-vPy" secondAttribute="trailing" id="Lsq-kQ-YVA"/>
-                <constraint firstItem="49T-Ji-0Ep" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="2" id="TAY-cZ-nyc"/>
-                <constraint firstItem="49T-Ji-0Ep" firstAttribute="top" secondItem="LrL-cA-yki" secondAttribute="bottom" constant="23" id="Xr6-SP-Uht"/>
+                <constraint firstItem="49T-Ji-0Ep" firstAttribute="top" secondItem="f8j-Gy-QgE" secondAttribute="bottom" constant="1" id="QTl-WC-O8Q"/>
+                <constraint firstItem="49T-Ji-0Ep" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="TAY-cZ-nyc"/>
                 <constraint firstItem="PkE-e3-uOx" firstAttribute="top" secondItem="p7p-Cw-vPy" secondAttribute="bottom" constant="36" id="cWT-8J-s7S"/>
                 <constraint firstItem="p7p-Cw-vPy" firstAttribute="top" secondItem="1" secondAttribute="top" id="dik-Zn-6N9"/>
                 <constraint firstItem="p7p-Cw-vPy" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="duP-yu-2Zd"/>
@@ -84,6 +94,7 @@
                 <constraint firstItem="LrL-cA-yki" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="eAZ-Be-Gfk"/>
                 <constraint firstItem="Rqg-rU-WFe" firstAttribute="top" secondItem="p7p-Cw-vPy" secondAttribute="bottom" constant="36" id="hjG-NJ-w1Y"/>
                 <constraint firstItem="PkE-e3-uOx" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="17" id="oiH-4c-fnd"/>
+                <constraint firstItem="f8j-Gy-QgE" firstAttribute="top" secondItem="LrL-cA-yki" secondAttribute="bottom" constant="45" id="s8e-fS-bqy"/>
                 <constraint firstAttribute="trailing" secondItem="LrL-cA-yki" secondAttribute="trailing" constant="16" id="vE7-a6-aX1"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
