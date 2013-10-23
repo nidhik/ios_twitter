@@ -53,6 +53,9 @@
     
     [self.retweet setTarget:self];
     [self.retweet setAction:@selector(onRetweet)];
+    if (self.tweet.retweeted) {
+        self.retweet.tintColor = [UIColor greenColor];
+    }
     
     [self.favorite setTarget:self];
     [self.favorite setAction:@selector(onFav)];

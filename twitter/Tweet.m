@@ -43,6 +43,11 @@
     return [formatter dateFromString:date];
 }
 
+- (bool) retweeted {
+    NSString *val = [self.data valueOrNilForKeyPath:@"retweeted"];
+    return [val intValue];
+}
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *params in array) {

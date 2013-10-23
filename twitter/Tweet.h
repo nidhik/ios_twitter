@@ -15,6 +15,7 @@
 @property (nonatomic, strong, readonly) NSString *screenName;
 @property (nonatomic, strong, readonly) NSDate *createdDate;
 @property (nonatomic, strong, readonly) NSURL *profileImageURL;
+@property (nonatomic, assign, readonly) bool retweeted;
 
 @property (nonatomic, assign, readonly) NSString *statusId;
 
