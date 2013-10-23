@@ -52,6 +52,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self reload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,10 +78,7 @@
 {
     static NSString *CellIdentifier = @"TweetCell";
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    //UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-
     Tweet *tweet = self.tweets[indexPath.row];
-    
     [cell updateUIElementsWithTweet:tweet];
     
     return cell;
@@ -134,8 +133,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView
-heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Tweet *tweet = self.tweets[indexPath.row];
 	NSString *text = tweet.text;
     
@@ -171,6 +169,11 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void) onComposeButton
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reload)
+                                                 name:@"ComposeModalDismissed"
+                                               object:nil];
+    
     ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithNibName:@"ComposeTweetView" bundle:nil];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     

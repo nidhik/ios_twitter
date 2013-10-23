@@ -60,12 +60,14 @@
     
     [self.tweetComposeView becomeFirstResponder];
     
-   
-    // nice to have a disabled Tweet button to start. enabled when there are 0 < n < 141 characters
+    // would be nice to have a disabled Tweet button to start. enabled when there are 0 < n < 141 characters
 }
 
 - (void) onCancelButton
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ComposeModalDismissed"
+                                                        object:nil
+                                                      userInfo:nil];
     [self.navigationController dismissViewControllerAnimated:YES completion:^(void){}];
 }
 
@@ -73,6 +75,7 @@
 {
     NSString *text = self.tweetComposeView.text;
     if (self.tweetComposeView.text.length > 140) {
+        // gross, a hack until have time to constrain user input once 140 char limit is reached
         text = [self.tweetComposeView.text substringWithRange:NSMakeRange(0, 141)];
     }
     
