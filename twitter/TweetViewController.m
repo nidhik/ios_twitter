@@ -8,6 +8,7 @@
 
 #import "TweetViewController.h"
 #import "ComposeTweetViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface TweetViewController ()
 
@@ -40,6 +41,11 @@
 {
     [super viewDidLoad];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Compose" style:UIBarButtonItemStylePlain target:self action:@selector(onComposeButton)];
+
+    self.nameLabel.text = self.tweet.name;
+    self.screenNameLabel.text = self.tweet.screenName;
+    [self.profileImage setImageWithURL:self.tweet.profileImageURL];
+    self.tweetTextLabel.text = self.tweet.text;
 
 	// Do any additional setup after loading the view.
 }
