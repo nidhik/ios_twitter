@@ -63,7 +63,8 @@
     	int diff = round(ti / 60 / 60 / 24);
     	return[NSString stringWithFormat:@"%dd", diff];
     } else {
-    	return @"never";
+        [dateFormatter setDateFormat:@"MM/dd/yyyy"];
+        return [dateFormatter stringFromDate:[NSDate date]];
     }
     return 0;
 }
