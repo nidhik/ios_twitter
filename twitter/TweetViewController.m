@@ -11,6 +11,18 @@
 
 @interface TweetViewController ()
 
+// these three keep showing up, this needs to be its own nib I can reuse
+// haven't figured that out yet
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *reply;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *retweet;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *favorite;
+
 @end
 
 @implementation TweetViewController
