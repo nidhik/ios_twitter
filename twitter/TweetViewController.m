@@ -69,8 +69,10 @@
 - (void) onRetweet {
     [[TwitterClient instance] retweet:self.tweet.statusId success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"%@", response);
+        self.retweet.tintColor = [UIColor greenColor];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
+        self.retweet.tintColor = [UIColor redColor];
     }];
 }
 - (void) onFav {
