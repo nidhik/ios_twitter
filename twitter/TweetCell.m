@@ -42,7 +42,7 @@
     self.tweetText.text = tweet.text;
     self.nameLabel.text = tweet.name;
     self.userNameLabel.text = tweet.screenName;
-    self.timestampLabel.text = [NSString stringWithFormat:@"%02f", tweet.createdDate.timeIntervalSinceNow];
+    self.timestampLabel.text = tweet.createdDate;
     [self.profileImage setImageWithURL:tweet.profileImageURL];
    
 }
