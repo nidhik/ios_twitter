@@ -48,11 +48,9 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Tweet" style:UIBarButtonItemStylePlain target:self action:@selector(onTweetButton)];
     User *_currentUser = [User currentUser];
     
-    self.nameLabel.text = [_currentUser objectForKey:@"name"];
-    self.screenNameLabel.text = [_currentUser objectForKey:@"screen_name"];
-    NSString *urlString = [_currentUser objectForKey:@"profile_image_url"];
-    NSURL *imageURL = [[NSURL alloc] initWithString:urlString];
-    [self.profileImage setImageWithURL:imageURL];
+    self.nameLabel.text = _currentUser.name;
+    self.screenNameLabel.text = _currentUser.screenName;
+    [self.profileImage setImageWithURL:_currentUser.profileImageURL];
     
     if (self.initialText) {
         self.tweetComposeView.text = self.initialText;

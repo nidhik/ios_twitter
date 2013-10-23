@@ -61,8 +61,7 @@
 }
 
 - (void) onReply {
-    NSString *replyTo = [NSString stringWithFormat:@"@%@ ", self.tweet.screenName];
-    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithStartTweetText:replyTo];
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithStartTweetText:self.tweet.screenName];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];    
     [self presentViewController:nvc animated:YES completion:nil];
 }

@@ -19,7 +19,11 @@
 }
 
 - (NSString *)screenName {
-    return [self.data valueOrNilForKeyPath:@"user.screen_name"];
+    NSString *_sn = [self.data valueOrNilForKeyPath:@"user.screen_name"];
+    if (_sn) {
+        return [NSString stringWithFormat:@"@%@ ", _sn ];
+    }
+    return _sn;
 }
 
 - (NSURL *)profileImageURL {
