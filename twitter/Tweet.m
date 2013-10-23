@@ -31,13 +31,8 @@
     return [[NSURL alloc] initWithString:url];
 }
 
-- (int)statusId {
-    NSString *idStr = [self.data valueOrNilForKeyPath:@"id"];
-    
-    if (idStr) {
-        return [idStr intValue];
-    }
-    return 0; //don't have one
+- (NSString *)statusId {
+    return [self.data valueOrNilForKeyPath:@"id"];
 }
 
 

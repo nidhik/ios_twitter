@@ -144,7 +144,7 @@
                            options:NSStringDrawingUsesLineFragmentOrigin
                            attributes:nil
                            context:nil];
-    NSLog(@"%f", CGRectGetHeight(CGRectIntegral(textRect)));
+    //NSLog(@"%f", CGRectGetHeight(CGRectIntegral(textRect)));
 
 	return MAX(44.0f, CGRectGetHeight(CGRectIntegral(textRect)) + 50);
 }

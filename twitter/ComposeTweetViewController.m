@@ -18,17 +18,17 @@
 @property (weak, nonatomic) IBOutlet UITextView *tweetComposeView;
 
 @property (retain, nonatomic) NSString *initialText;
-@property (assign, nonatomic) int replyId;
+@property (assign, nonatomic) NSString *replyId;
 
 @end
 
 @implementation ComposeTweetViewController
 
-- (id)initWithStartTweetTextAndOptionalReplyStatusId:(NSString *)startTweetText optionalReplyStatusId:(int) replyStatusId {
+- (id)initWithStartTweetTextAndOptionalReplyStatusId:(NSString *)startTweetText optionalReplyStatusId:(NSString *) replyStatusId {
     self = [super initWithNibName:@"ComposeTweetView" bundle:nil];
     if (self) {
         self.initialText = startTweetText;
-        self.replyId = replyStatusId ? replyStatusId : 0;
+        self.replyId = replyStatusId;
     }
     return self;
 }

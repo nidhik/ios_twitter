@@ -16,7 +16,7 @@
 @property (nonatomic, strong, readonly) NSDate *createdDate;
 @property (nonatomic, strong, readonly) NSURL *profileImageURL;
 
-@property (nonatomic, assign, readonly) int statusId;
+@property (nonatomic, assign, readonly) NSString *statusId;
 
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array;
 

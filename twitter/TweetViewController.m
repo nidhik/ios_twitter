@@ -67,7 +67,11 @@
 }
 
 - (void) onRetweet {
-    NSLog(@"retweet");
+    [[TwitterClient instance] retweet:self.tweet.statusId success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 - (void) onFav {
     NSLog(@"fav");
