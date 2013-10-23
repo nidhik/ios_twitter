@@ -10,6 +10,6 @@
 
 @interface ComposeTweetViewController : UIViewController
 
-- (id)initWithStartTweetText:(NSString *)startTweetText;
+- (id)initWithStartTweetTextAndOptionalReplyStatusId:(NSString *)startTweetText optionalReplyStatusId:(int) replyStatusId;
 
 @end

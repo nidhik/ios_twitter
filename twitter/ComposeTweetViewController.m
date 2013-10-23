@@ -18,15 +18,17 @@
 @property (weak, nonatomic) IBOutlet UITextView *tweetComposeView;
 
 @property (retain, nonatomic) NSString *initialText;
+@property (assign, nonatomic) int replyId;
 
 @end
 
 @implementation ComposeTweetViewController
 
-- (id)initWithStartTweetText:(NSString *)startTweetText {
+- (id)initWithStartTweetTextAndOptionalReplyStatusId:(NSString *)startTweetText optionalReplyStatusId:(int) replyStatusId {
     self = [super initWithNibName:@"ComposeTweetView" bundle:nil];
     if (self) {
         self.initialText = startTweetText;
+        self.replyId = replyStatusId ? replyStatusId : 0;
     }
     return self;
 }
@@ -69,8 +71,19 @@
 
 - (void) onTweetButton
 {
-    // call client here to post the tweet
-    //[[TwitterClient instance] blah figure out AFNetworking post here
+//    [[TwitterClient instance] tweet:self.tweetComposeView.text inReplyToStatusId:self.replyId success:^(AFHTTPRequestOperation *operation, id response) {
+//        NSLog(@"%@", response);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
+    
+    NSLog(@"%d", self.replyId);
+    NSString *text = self.tweetComposeView.text;
+    if (self.tweetComposeView.text.length > 140) {
+        text = [self.tweetComposeView.text substringWithRange:NSMakeRange(0, 141)];
+    }
+    NSLog(@"%@", text);
+
 }
 
 - (void)didReceiveMemoryWarning

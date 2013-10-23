@@ -31,6 +31,16 @@
     return [[NSURL alloc] initWithString:url];
 }
 
+- (int)statusId {
+    NSString *idStr = [self.data valueOrNilForKeyPath:@"id"];
+    
+    if (idStr) {
+        return [idStr intValue];
+    }
+    return 0; //don't have one
+}
+
+
 - (NSDate *)createdDate {
     NSString *date = [self.data valueOrNilForKeyPath:@"created_at"];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];

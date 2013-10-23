@@ -61,7 +61,7 @@
 }
 
 - (void) onReply {
-    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithStartTweetText:self.tweet.screenName];
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithStartTweetTextAndOptionalReplyStatusId:self.tweet.screenName optionalReplyStatusId:self.tweet.statusId];
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];    
     [self presentViewController:nvc animated:YES completion:nil];
 }

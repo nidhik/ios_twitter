@@ -65,6 +65,19 @@ static NSString * const kAccessTokenKey = @"kAccessTokenKey";
     [self getPath:@"1.1/statuses/home_timeline.json" parameters:params success:success failure:failure];
 }
 
+- (void)tweet:(NSString*)status inReplyToStatusId:(int)inReplyToStatusId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"status": status}];
+    if (inReplyToStatusId) {
+        [params setObject:@(inReplyToStatusId) forKey:@"in_reply_to_status_id"];
+    }
+    
+    [self postPath:@"1.1/statuses/update.json" parameters:params success:success failure:failure];
+    
+}
+
+
+
 #pragma mark - Private methods
 
 - (void)setAccessToken:(AFOAuth1Token *)accessToken {
