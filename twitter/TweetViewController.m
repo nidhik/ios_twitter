@@ -12,7 +12,7 @@
 
 @interface TweetViewController ()
 
-// these three keep showing up, this needs to be its own nib I can reuse
+// these three keep showing up, this needs to be its own nib so I can reuse
 // haven't figured that out yet
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -61,7 +61,10 @@
 }
 
 - (void) onReply {
-    NSLog(@"onreply");
+    NSString *replyTo = [NSString stringWithFormat:@"@%@ ", self.tweet.screenName];
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithStartTweetText:replyTo];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];    
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void) onRetweet {

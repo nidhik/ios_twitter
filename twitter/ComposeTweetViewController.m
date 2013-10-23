@@ -17,9 +17,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
 @property (weak, nonatomic) IBOutlet UITextView *tweetComposeView;
 
+@property (retain, nonatomic) NSString *initialText;
+
 @end
 
 @implementation ComposeTweetViewController
+
+- (id)initWithStartTweetText:(NSString *)startTweetText {
+    self = [super initWithNibName:@"ComposeTweetView" bundle:nil];
+    if (self) {
+        self.initialText = startTweetText;
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +53,11 @@
     NSString *urlString = [_currentUser objectForKey:@"profile_image_url"];
     NSURL *imageURL = [[NSURL alloc] initWithString:urlString];
     [self.profileImage setImageWithURL:imageURL];
+    
+    if (self.initialText) {
+        self.tweetComposeView.text = self.initialText;
+    }
+    
     [self.tweetComposeView becomeFirstResponder];
     
    
