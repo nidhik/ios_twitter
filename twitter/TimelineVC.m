@@ -56,6 +56,10 @@
     [self reload];
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [self reload]; // clunky but need this as a quick way to pull in retweet and fav statuses
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
