@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@nidhik82" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-Ar-Sir">
-                        <rect key="frame" x="158" y="4" width="57" height="15"/>
+                        <rect key="frame" x="155" y="4" width="57" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -65,10 +65,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="jxa-2w-b8H" firstAttribute="leading" secondItem="ELT-aE-8yS" secondAttribute="leading" constant="12" id="3wa-Tw-Dem"/>
-                    <constraint firstItem="9hp-Ar-Sir" firstAttribute="leading" secondItem="9YP-Y0-FLV" secondAttribute="trailing" constant="4" id="B9t-ba-vFw"/>
+                    <constraint firstItem="9hp-Ar-Sir" firstAttribute="leading" secondItem="9YP-Y0-FLV" secondAttribute="trailing" constant="1" id="B9t-ba-vFw"/>
                     <constraint firstItem="jxa-2w-b8H" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="FNO-j7-v4c"/>
                     <constraint firstAttribute="trailing" secondItem="v2x-Rw-vEJ" secondAttribute="trailing" constant="15" id="FgW-i8-ZQW"/>
-                    <constraint firstItem="v2x-Rw-vEJ" firstAttribute="leading" secondItem="9hp-Ar-Sir" secondAttribute="trailing" constant="75" id="LaP-GC-7ok"/>
                     <constraint firstItem="v2x-Rw-vEJ" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="WOX-UH-19U"/>
                     <constraint firstItem="9YP-Y0-FLV" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="16" id="eDW-Ow-tW6"/>
                     <constraint firstItem="9hp-Ar-Sir" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="mum-ue-huc"/>
