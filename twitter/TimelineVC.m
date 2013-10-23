@@ -134,6 +134,24 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Tweet *tweet = self.tweets[indexPath.row];
+	NSString *codename = tweet.text;
+    
+	CGRect codenameRect = [codename
+                           boundingRectWithSize:CGSizeMake(
+                                                           CGRectGetWidth(CGRectIntegral(tableView.bounds)) - 40,
+                                                           MAXFLOAT) // 40 = 20pt horizontal padding on each side
+                           options:NSStringDrawingUsesLineFragmentOrigin
+                           attributes:nil
+                           context:nil];
+    NSLog(@"%f", CGRectGetHeight(CGRectIntegral(codenameRect)));
+	return MAX(44.0f, CGRectGetHeight(CGRectIntegral(codenameRect)) + 50);
+    
+    // 20 = 10pt vertical padding on each end
+}
+
 /*
 #pragma mark - Navigation
 
