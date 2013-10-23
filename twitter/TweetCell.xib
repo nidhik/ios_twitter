@@ -26,7 +26,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nidhi Kulkarni" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YP-Y0-FLV">
-                        <rect key="frame" x="74" y="4" width="80" height="15"/>
+                        <rect key="frame" x="64" y="4" width="80" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@nidhik82" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hp-Ar-Sir">
-                        <rect key="frame" x="155" y="4" width="57" height="15"/>
+                        <rect key="frame" x="145" y="4" width="57" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -53,8 +53,8 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a tweet #ios #codepath" lineBreakMode="wordWrap" numberOfLines="140" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="ero-LO-AAt">
-                        <rect key="frame" x="74" y="25" width="152" height="15"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a tweet #ios #codepath" lineBreakMode="wordWrap" numberOfLines="140" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="ero-LO-AAt">
+                        <rect key="frame" x="64" y="25" width="232" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" none="YES" staticText="YES" notEnabled="YES"/>
@@ -70,10 +70,11 @@
                     <constraint firstItem="9hp-Ar-Sir" firstAttribute="leading" secondItem="9YP-Y0-FLV" secondAttribute="trailing" constant="1" id="B9t-ba-vFw"/>
                     <constraint firstItem="jxa-2w-b8H" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="FNO-j7-v4c"/>
                     <constraint firstAttribute="trailing" secondItem="v2x-Rw-vEJ" secondAttribute="trailing" constant="15" id="FgW-i8-ZQW"/>
+                    <constraint firstAttribute="trailing" secondItem="ero-LO-AAt" secondAttribute="trailing" constant="24" id="V5g-KZ-1CL"/>
                     <constraint firstItem="v2x-Rw-vEJ" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="WOX-UH-19U"/>
-                    <constraint firstItem="ero-LO-AAt" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="16" id="YiO-Mb-7RN"/>
+                    <constraint firstItem="ero-LO-AAt" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="6" id="YiO-Mb-7RN"/>
                     <constraint firstItem="ero-LO-AAt" firstAttribute="top" secondItem="9YP-Y0-FLV" secondAttribute="bottom" constant="6" id="bbp-RX-Czr"/>
-                    <constraint firstItem="9YP-Y0-FLV" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="16" id="eDW-Ow-tW6"/>
+                    <constraint firstItem="9YP-Y0-FLV" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="6" id="eDW-Ow-tW6"/>
                     <constraint firstItem="9hp-Ar-Sir" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="mum-ue-huc"/>
                     <constraint firstItem="9YP-Y0-FLV" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="ytr-rs-cMd"/>
                 </constraints>
