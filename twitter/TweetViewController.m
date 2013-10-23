@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *tweetTextLabel;
+
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *reply;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *retweet;
@@ -46,8 +47,28 @@
     self.screenNameLabel.text = self.tweet.screenName;
     [self.profileImage setImageWithURL:self.tweet.profileImageURL];
     self.tweetTextLabel.text = self.tweet.text;
+    
+    [self.reply setTarget:self];
+    [self.reply setAction:@selector(onReply)];
+    
+    [self.retweet setTarget:self];
+    [self.retweet setAction:@selector(onRetweet)];
+    
+    [self.favorite setTarget:self];
+    [self.favorite setAction:@selector(onFav)];
 
 	// Do any additional setup after loading the view.
+}
+
+- (void) onReply {
+    NSLog(@"onreply");
+}
+
+- (void) onRetweet {
+    NSLog(@"retweet");
+}
+- (void) onFav {
+    NSLog(@"fav");
 }
 
 - (void) onComposeButton

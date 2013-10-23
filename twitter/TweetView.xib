@@ -7,9 +7,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetViewController">
             <connections>
+                <outlet property="favorite" destination="G0j-qp-XHv" id="krF-Kr-6XE"/>
                 <outlet property="nameLabel" destination="Rqg-rU-WFe" id="EhN-oM-Goj"/>
                 <outlet property="profileImage" destination="PkE-e3-uOx" id="CaV-8M-jUu"/>
+                <outlet property="reply" destination="dW1-5f-9QK" id="529-2I-ZfY"/>
+                <outlet property="retweet" destination="wPt-tE-ZoP" id="2i4-SC-rib"/>
                 <outlet property="screenNameLabel" destination="5gu-ke-SDW" id="XWU-Jb-ei3"/>
+                <outlet property="toolbar" destination="49T-Ji-0Ep" id="BLJ-YW-du3"/>
                 <outlet property="tweetTextLabel" destination="LrL-cA-yki" id="VS3-r9-c3r"/>
                 <outlet property="view" destination="1" id="5TO-i3-dlc"/>
             </connections>
