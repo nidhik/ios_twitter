@@ -7,6 +7,7 @@
 //
 
 #import "TweetViewController.h"
+#import "ComposeTweetViewController.h"
 
 @interface TweetViewController ()
 
@@ -17,7 +18,7 @@
 - (id) initWithTweet:(Tweet *) tweet {
     self = [super initWithNibName:@"TweetView" bundle:nil];
     if (self) {
-        self.title = @"I'm the tweet view";
+        self.title = @"Tweet";
         self.tweet = tweet;
     }
     return self;
@@ -26,7 +27,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Compose" style:UIBarButtonItemStylePlain target:self action:@selector(onComposeButton)];
+
 	// Do any additional setup after loading the view.
+}
+
+- (void) onComposeButton
+{
+    ComposeTweetViewController *vc = [[ComposeTweetViewController alloc] initWithNibName:@"ComposeTweetView" bundle:nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
