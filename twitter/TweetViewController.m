@@ -59,6 +59,9 @@
     
     [self.favorite setTarget:self];
     [self.favorite setAction:@selector(onFav)];
+    if (self.tweet.favorited) {
+        self.favorite.tintColor = [UIColor greenColor];
+    }
 
 	// Do any additional setup after loading the view.
 }
@@ -79,7 +82,13 @@
     }];
 }
 - (void) onFav {
-    NSLog(@"fav");
+    [[TwitterClient instance] favorite:self.tweet.statusId success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"%@", response);
+        self.favorite.tintColor = [UIColor greenColor];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        self.favorite.tintColor = [UIColor redColor];
+    }];
 }
 
 - (void) onComposeButton

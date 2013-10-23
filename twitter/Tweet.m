@@ -48,6 +48,11 @@
     return [val intValue];
 }
 
+- (bool) favorited {
+    NSString *val = [self.data valueOrNilForKeyPath:@"favorited"];
+    return [val intValue];
+}
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)array {
     NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *params in array) {
