@@ -23,39 +23,43 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-e3-uOx">
-                    <rect key="frame" x="17" y="80" width="57" height="50"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PkE-e3-uOx">
+                    <rect key="frame" x="17" y="80" width="50" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="LDh-0d-rRE"/>
+                        <constraint firstAttribute="height" constant="50" id="qlm-F4-rHy"/>
+                    </constraints>
                 </imageView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-rU-WFe">
-                    <rect key="frame" x="82" y="80" width="222" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqg-rU-WFe">
+                    <rect key="frame" x="82" y="80" width="72" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@testUser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gu-ke-SDW">
-                    <rect key="frame" x="82" y="101" width="215" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@testUser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gu-ke-SDW">
+                    <rect key="frame" x="82" y="101" width="79" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-Cw-vPy">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-Cw-vPy">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem title="Title" id="yH4-Nj-xuf"/>
                     </items>
                 </navigationBar>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tweet text heree" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="283" translatesAutoresizingMaskIntoConstraints="NO" id="LrL-cA-yki">
-                    <rect key="frame" x="21" y="160" width="283" height="191"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet text heree" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="LrL-cA-yki">
+                    <rect key="frame" x="16" y="160" width="288" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49T-Ji-0Ep">
-                    <rect key="frame" x="2" y="381" width="320" height="44"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49T-Ji-0Ep">
+                    <rect key="frame" x="2" y="201" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem title="Reply" id="dW1-5f-9QK"/>
@@ -65,6 +69,23 @@
                 </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5gu-ke-SDW" firstAttribute="leading" secondItem="PkE-e3-uOx" secondAttribute="trailing" constant="15" id="2ZQ-A9-1rP"/>
+                <constraint firstItem="LrL-cA-yki" firstAttribute="top" secondItem="PkE-e3-uOx" secondAttribute="bottom" constant="30" id="4GJ-ty-ySI"/>
+                <constraint firstItem="Rqg-rU-WFe" firstAttribute="leading" secondItem="PkE-e3-uOx" secondAttribute="trailing" constant="15" id="6j5-kQ-TsX"/>
+                <constraint firstAttribute="trailing" secondItem="49T-Ji-0Ep" secondAttribute="trailing" constant="-2" id="Bqq-Tz-neE"/>
+                <constraint firstAttribute="trailing" secondItem="p7p-Cw-vPy" secondAttribute="trailing" id="Lsq-kQ-YVA"/>
+                <constraint firstItem="49T-Ji-0Ep" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="2" id="TAY-cZ-nyc"/>
+                <constraint firstItem="49T-Ji-0Ep" firstAttribute="top" secondItem="LrL-cA-yki" secondAttribute="bottom" constant="23" id="Xr6-SP-Uht"/>
+                <constraint firstItem="PkE-e3-uOx" firstAttribute="top" secondItem="p7p-Cw-vPy" secondAttribute="bottom" constant="36" id="cWT-8J-s7S"/>
+                <constraint firstItem="p7p-Cw-vPy" firstAttribute="top" secondItem="1" secondAttribute="top" id="dik-Zn-6N9"/>
+                <constraint firstItem="p7p-Cw-vPy" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="duP-yu-2Zd"/>
+                <constraint firstItem="5gu-ke-SDW" firstAttribute="top" secondItem="Rqg-rU-WFe" secondAttribute="bottom" id="dzA-91-dBm"/>
+                <constraint firstItem="LrL-cA-yki" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="16" id="eAZ-Be-Gfk"/>
+                <constraint firstItem="Rqg-rU-WFe" firstAttribute="top" secondItem="p7p-Cw-vPy" secondAttribute="bottom" constant="36" id="hjG-NJ-w1Y"/>
+                <constraint firstItem="PkE-e3-uOx" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="17" id="oiH-4c-fnd"/>
+                <constraint firstAttribute="trailing" secondItem="LrL-cA-yki" secondAttribute="trailing" constant="16" id="vE7-a6-aX1"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
