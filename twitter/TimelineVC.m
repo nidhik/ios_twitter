@@ -141,12 +141,13 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	CGRect textRect = [text
                            boundingRectWithSize:CGSizeMake(
-                                                           CGRectGetWidth(CGRectIntegral(tableView.bounds)) - 40,
+                                                           CGRectGetWidth(CGRectIntegral(tableView.bounds)),
                                                            MAXFLOAT)
                            options:NSStringDrawingUsesLineFragmentOrigin
                            attributes:nil
                            context:nil];
     NSLog(@"%f", CGRectGetHeight(CGRectIntegral(textRect)));
+
 	return MAX(44.0f, CGRectGetHeight(CGRectIntegral(textRect)) + 50);
 }
 
