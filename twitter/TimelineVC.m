@@ -137,19 +137,17 @@
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Tweet *tweet = self.tweets[indexPath.row];
-	NSString *codename = tweet.text;
+	NSString *text = tweet.text;
     
-	CGRect codenameRect = [codename
+	CGRect textRect = [text
                            boundingRectWithSize:CGSizeMake(
                                                            CGRectGetWidth(CGRectIntegral(tableView.bounds)) - 40,
-                                                           MAXFLOAT) // 40 = 20pt horizontal padding on each side
+                                                           MAXFLOAT)
                            options:NSStringDrawingUsesLineFragmentOrigin
                            attributes:nil
                            context:nil];
-    NSLog(@"%f", CGRectGetHeight(CGRectIntegral(codenameRect)));
-	return MAX(44.0f, CGRectGetHeight(CGRectIntegral(codenameRect)) + 50);
-    
-    // 20 = 10pt vertical padding on each end
+    NSLog(@"%f", CGRectGetHeight(CGRectIntegral(textRect)));
+	return MAX(44.0f, CGRectGetHeight(CGRectIntegral(textRect)) + 50);
 }
 
 /*
