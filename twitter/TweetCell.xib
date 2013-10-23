@@ -53,7 +53,7 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm a tweet #ios #codepath" lineBreakMode="wordWrap" numberOfLines="140" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="ero-LO-AAt">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a tweet #ios #codepath" lineBreakMode="wordWrap" numberOfLines="140" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="152" translatesAutoresizingMaskIntoConstraints="NO" id="ero-LO-AAt">
                         <rect key="frame" x="74" y="25" width="152" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <accessibility key="accessibilityConfiguration">
@@ -65,10 +65,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="jxa-2w-b8H" firstAttribute="leading" secondItem="ELT-aE-8yS" secondAttribute="leading" constant="12" id="3wa-Tw-Dem"/>
+                    <constraint firstItem="ero-LO-AAt" firstAttribute="top" secondItem="v2x-Rw-vEJ" secondAttribute="bottom" constant="6" id="5lB-g9-03Q"/>
+                    <constraint firstItem="ero-LO-AAt" firstAttribute="top" secondItem="9hp-Ar-Sir" secondAttribute="bottom" constant="6" id="7yx-EJ-wrc"/>
                     <constraint firstItem="9hp-Ar-Sir" firstAttribute="leading" secondItem="9YP-Y0-FLV" secondAttribute="trailing" constant="1" id="B9t-ba-vFw"/>
                     <constraint firstItem="jxa-2w-b8H" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="FNO-j7-v4c"/>
                     <constraint firstAttribute="trailing" secondItem="v2x-Rw-vEJ" secondAttribute="trailing" constant="15" id="FgW-i8-ZQW"/>
                     <constraint firstItem="v2x-Rw-vEJ" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="WOX-UH-19U"/>
+                    <constraint firstItem="ero-LO-AAt" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="16" id="YiO-Mb-7RN"/>
+                    <constraint firstItem="ero-LO-AAt" firstAttribute="top" secondItem="9YP-Y0-FLV" secondAttribute="bottom" constant="6" id="bbp-RX-Czr"/>
                     <constraint firstItem="9YP-Y0-FLV" firstAttribute="leading" secondItem="jxa-2w-b8H" secondAttribute="trailing" constant="16" id="eDW-Ow-tW6"/>
                     <constraint firstItem="9hp-Ar-Sir" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="mum-ue-huc"/>
                     <constraint firstItem="9YP-Y0-FLV" firstAttribute="top" secondItem="ELT-aE-8yS" secondAttribute="top" constant="4" id="ytr-rs-cMd"/>
